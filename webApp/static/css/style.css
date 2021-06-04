@@ -1,0 +1,31 @@
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: black;
+    font-family: "Baloo Tammudu 2", cursive;
+}
+
+.elems {
+    padding-left: 30px;
+    /*# top, right, bottom, left*/
+}
+
+h1{
+    display: flex;
+}
+
+.heading{
+    width: 100%;
+    background-image: linear-gradient(to right top, aquamarine, aqua);
+}
+
+.heading a,
+.heading a:visited,
+.heading a:active{
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    color: azure;
+}
+
