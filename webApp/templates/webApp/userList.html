@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style="background: rgba(214,51,132,0);max-width: 100%;width: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SoNeeda</title>
+    {#    <link rel="stylesheet" href="../../static/assets/bootstrap/css/bootstrap.min.css">#}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Tammudu+2:500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500">
+    {#    <link rel="stylesheet" href="../../static/assets/css/styles.css">#}
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    {#    <link rel="stylesheet" href="../../static/assets/css/Team-Boxed.css">#}
+    <link rel="stylesheet" href="{% static 'assets/css/Team-Boxed.css' %}">
+    {#    <link rel="stylesheet" href="../../static/assets/css/Team-Grid.css">#}
+    <link rel="stylesheet" href="{% static 'assets/css/Team-Grid.css' %}">
+</head>
+
+<body style="max-width: 100%;width: 100%;height: 100%;max-height: 100%;">
+<h1 class="border rounded" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom"
+    style="color: var(--bs-white);background: var(--bs-blue);height: 100px;padding-top: 025px;padding-left: 25%;font-family: 'Dancing Script', serif;font-size: 50px;margin: 0;padding-right: 25%;"
+    title="Home Page"><a href="/">SoNeeda</a></h1>
+<div class="container"
+     style="width: 100%;height: 40%;margin: 0;margin-top: 10px;padding: 0 25%;font-family: 'Baloo Tammudu 2', serif;text-align: center;">
+    <div class="row people" style="width: 100%;height: 100%;margin: 0 0;padding: 0;">
+        {% for ac in accounts %}
+            <div class="col-md-4 col-lg-3 item" style="width: 20%;padding-right: 2%;padding-left: 2%;"><a class="userList"
+                    href="{% url 'userDetails' pk=ac.pk %}">
+                <img
+                        class="rounded-circle" src="../../static/assets/img/1.jpg" width="100%" height="auto">
+                <div class="cover"
+                     style="word-wrap: break-word!important;
+                            word-break: break-word!important;
+                            width: 100%;height: 50%;
+                            margin-top: 5%;padding-right: 2%;padding-left: 2%;
+                            text-align: center;
+                            font-size: 15px;">
+                    <h3 class="name" style="text-align: center;font-size: 20px;margin-bottom: 0;">{{ ac.name }}</h3>
+                    <p class="title" style="margin-bottom: 0; text-align: center; font-size: 12px;">{{ ac.email }}</p>
+                </div>
+            </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<script src="../../static/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../static/assets/js/bs-init.js"></script>
+</body>
+
+</html>

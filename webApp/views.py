@@ -7,7 +7,8 @@ from .models import Account
 
 def account(request):
     accounts = Account.objects.all()
-    return render(request, 'webApp/bio.html', {'accounts': accounts})
+    # return render(request, 'webApp/user_list.html', {'accounts': accounts})
+    return render(request, 'webApp/userList.html', {'accounts': accounts})
 
 
 def user_details(request, pk):
